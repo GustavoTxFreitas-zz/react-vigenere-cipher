@@ -8,7 +8,7 @@ function Input({ label, value, setValue }) {
 
                 <input type='text' 
                 value={value}
-                onChange={e => setValue(e.target.value)}
+                onChange={e => setValue(e.target.value.toUpperCase())}
                 placeholder='Digite algo:' />
                 
             </label>
