@@ -1,0 +1,34 @@
+*{
+    border: 0;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+}
+
+body, html{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e3e3e3;
+    font-family: Roboto, Arial, sans-serif;
+}
+
+#App{
+    width: 25em;
+    padding: 2em;
+    display: flex;
+    border-radius: 1em;
+    flex-direction: column;
+    background-color: #ebebeb;
+    box-shadow: 0 0 0.8em #0006;
+}
+
+#buttonContainer{
+    width: 100%;
+    display: flex;
+    margin-top: 1.5em;
+    justify-content: space-around;
+}

@@ -1,0 +1,25 @@
+.inputContainer{
+    display: flex;
+    margin-bottom: 1em;
+    flex-direction: column;
+}
+
+.inputLabel{
+    color: #666;
+    margin: 0.4em;
+    font-size: 0.9em;
+    font-weight: 700;
+}
+
+.input{
+    width: 100%;
+    padding: 1em;
+    border-radius: 0.5em;
+    background-color: #f2f2f2;
+    border: 0.15em solid #ccc;
+}
+
+.input:focus{
+    border-color: #00e030;
+    transition: border 0.3s;
+}
