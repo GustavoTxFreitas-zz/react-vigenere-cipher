@@ -1,13 +1,12 @@
-*{
+* {
     border: 0;
     margin: 0;
     padding: 0;
     outline: 0;
     box-sizing: border-box;
-    text-transform: capitalize;
 }
 
-body, html{
+body, html {
     height: 100%;
     display: flex;
     align-items: center;
@@ -16,19 +15,51 @@ body, html{
     font-family: Roboto, Arial, sans-serif;
 }
 
-#App{
-    width: 25em;
-    padding: 2em;
+#App {
+    width: 70vw;
+    padding: 2.5vw;
     display: flex;
     border-radius: 1em;
-    flex-direction: column;
+    flex-direction: row;
     background-color: #ebebeb;
-    box-shadow: 0 0 0.8em #0006;
+    box-shadow: 0 0 0.8em #0004;
+    justify-content: space-around;
 }
 
-#buttonContainer{
+#column1{
+    width: 35vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-right: 0.3em dotted #ddd;
+}
+
+#column2{
+    width: 25vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.display{
+    color: #7c203a;
+    font-size: 3em;
+    font-weight: 300;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+#resultado{
+    color: #f85959;
+}
+
+p {
+    color: #7c203a;
+    font-size: 0.9em;
+    font-weight: 700;
+}
+
+#buttonContainer {
     width: 100%;
     display: flex;
-    margin-top: 1.5em;
-    justify-content: space-around;
+    justify-content: space-between;
 }

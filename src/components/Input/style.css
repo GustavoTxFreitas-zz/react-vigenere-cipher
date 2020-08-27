@@ -1,25 +1,39 @@
-.inputContainer{
-    display: flex;
-    margin-bottom: 1em;
-    flex-direction: column;
-}
-
-.inputLabel{
+.label{
     color: #666;
     margin: 0.4em;
     font-size: 0.9em;
     font-weight: 700;
 }
 
+.inputContainer{
+    height: 1em;
+    display: flex;
+    margin: 1.4em 0;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .input{
-    width: 100%;
-    padding: 1em;
+    z-index: 0;
+    width: 25vw;
+    height: 3em;
+    padding-left: 2em;
+    position: absolute;
     border-radius: 0.5em;
     background-color: #f2f2f2;
     border: 0.15em solid #ccc;
 }
 
 .input:focus{
-    border-color: #00e030;
+    border-color: #ff9f68;
     transition: border 0.3s;
+}
+
+.icon{
+    z-index: 1;
+    color: #ccc;
+    font-size: 1em;
+    position: absolute;
+    margin-left: 0.5em;
+    margin-bottom: -1em;
 }
