@@ -8,7 +8,7 @@ import './general.css'
 const App = () => {
   const [key, setKey] = useState('');
   const [text, setText] = useState('');
-  const display = document.querySelector('span#resultado');
+  const display = document.querySelector('div#column1');
 
   // Criar uma chave de criptografia
   const createKeyword = (keyword, length) => {
@@ -26,38 +26,43 @@ const App = () => {
 
     var newText = '';
     for (var i = 0; i < x; i++) {
-      if(!(text[i] >= 'A' && text[i] <= 'Z')){
+      if (!(text[i] >= 'A' && text[i] <= 'Z')) {
         newText += text[i];
         continue;
       }
       newText += String.fromCharCode((text.charCodeAt(i) + keyword.charCodeAt(i)) % 26 + 65);
     }
-    display.innerText = newText;
+    display.innerHTML = '<p>Antes:</p><h1>' + text + '</h1><p>Depois:</p><h1 id="cor-secundaria">' + newText + '</h1>';
   }
 
   // Descriptografar o texto a partir da chave
-  function originText(){
+  function originText() {
     var x = text.length;
     var keyword = createKeyword('', x);
 
     var newText = '';
     for (var i = 0; i < x; i++) {
-      if(!(text[i] >= 'A' && text[i] <= 'Z')){
+      if (!(text[i] >= 'A' && text[i] <= 'Z')) {
         newText += text[i];
         continue;
       }
       newText += String.fromCharCode((text.charCodeAt(i) - keyword.charCodeAt(i) + 26) % 26 + 65);
     }
-    display.innerText = newText;
+    display.innerHTML = '<p>Antes:</p><h1>' + text + '</h1><p>Depois:</p><h1 id="cor-secundaria">' + newText + '</h1>';
   }
 
   return (
     <div id='App'>
       <div id='column1'>
-        <p>Antes:</p>
-        <span className='display'>{text}</span>
-        <p>Depois:</p>
-        <span id='resultado' className='display'></span>
+        <h1>Cifra de Vigenère</h1>
+
+        <p>A cifra de Vigenère é um método de criptografia de substituição polialfabética, que usa uma série cifras de César baseadas nas letras de uma palavra chave.</p>
+
+        <footer>
+          <p>
+            Todos os direitos reservados, <a href='https://github.com/GustavoTxFreitas'>Gustavo Teixeira</a>.
+          </p>
+        </footer>
       </div>
 
       <div id='column2'>
