@@ -55,9 +55,9 @@ const App = () => {
     <div id='App'>
       <div id='column1'>
         <p>Antes:</p>
-        <span className='display'>{text || 'Valor'}</span>
+        <span className='display'>{text}</span>
         <p>Depois:</p>
-        <span id='resultado' className='display'>Valor</span>
+        <span id='resultado' className='display'></span>
       </div>
 
       <div id='column2'>
