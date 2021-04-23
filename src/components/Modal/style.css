@@ -1,0 +1,50 @@
+@media (max-width: 800px) {
+  .content {
+    width: 100%;
+    height: 98%;
+  }
+}
+
+@media (min-width: 801px) {
+  .content {
+    width: 70%;
+    height: 100%;
+  }
+}
+
+.hidden{
+    position: absolute;
+    opacity: 0;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #000a;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  width: 90vw;
+  height: 80vh;
+  max-width: 60em;
+  position: relative;
+  box-shadow: 0 0 2em #222;
+  background-image: linear-gradient(
+    to top right,
+    rgb(250, 147, 78),
+    rgb(255, 115, 115)
+  );
+}
+
+.content {
+  right: 0;
+  position: absolute;
+  background-color: #ebebeb;
+}

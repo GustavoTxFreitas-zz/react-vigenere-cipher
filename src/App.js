@@ -3,7 +3,8 @@ import { faKey, faFont } from '@fortawesome/free-solid-svg-icons';
 
 import Input from './components/Input/';
 import Button from './components/Button/';
-import './general.css'
+import Modal from "./components/Modal";
+import './App.css';
 
 const App = () => {
   const [key, setKey] = useState('');
@@ -53,18 +54,8 @@ const App = () => {
 
   return (
     <div id='App'>
-      <div id='column1'>
-        <h1>Cifra de Vigenère</h1>
-
-        <p>A cifra de Vigenère é um método de criptografia de substituição polialfabética, que usa uma série cifras de César baseadas nas letras de uma palavra chave.</p>
-
-        <footer>
-          <p>
-            Todos os direitos reservados, <a href='https://github.com/GustavoTxFreitas'>Gustavo Teixeira</a>.
-          </p>
-        </footer>
-      </div>
-
+      <Modal hidden={false} />
+      
       <div id='column2'>
 
         <Input label='Insira uma Chave' icon={faKey} value={key} setValue={setKey} />
