@@ -1,0 +1,8 @@
+a {
+  color: #f85959;
+  transition: opacity 0.1s;
+}
+
+a:hover {
+  opacity: 0.5;
+}

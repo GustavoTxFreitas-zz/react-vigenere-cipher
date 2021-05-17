@@ -1,50 +1,106 @@
-@media (max-width: 800px) {
-  .content {
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css");
+
+@media (max-width: 425px) {
+  .modal > .content {
     width: 100%;
     height: 98%;
   }
 }
 
-@media (min-width: 801px) {
-  .content {
-    width: 70%;
+@media (min-width: 426px) {
+  .modal > .content {
+    width: 80%;
     height: 100%;
+    border-top-right-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
   }
 }
 
-.hidden{
-    position: absolute;
-    opacity: 0;
-}
-
-.container {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  background-color: #000a;
-}
-
-.center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .modal {
-  width: 90vw;
-  height: 80vh;
-  max-width: 60em;
+  width: 90%;
+  height: 80%;
+  max-width: 48em;
+  overflow: hidden;
   position: relative;
-  box-shadow: 0 0 2em #222;
-  background-image: linear-gradient(
-    to top right,
-    rgb(250, 147, 78),
-    rgb(255, 115, 115)
-  );
+  border-radius: 0.5em;
+  box-shadow: 0 0 2em #333;
+  background-image: linear-gradient(60deg, #ff5858 0%, #faa938 100%);
 }
 
-.content {
-  right: 0;
+.modal > .background {
+  left: 20%;
+  height: 100%;
+  opacity: 0.1;
   position: absolute;
+  transform: scale(1.5);
+}
+
+.modal > .content {
+  right: 0;
+  display: flex;
+  color: #333333;
+  position: absolute;
+  padding: 1.5em 2em;
+  overflow-y: scroll;
+  flex-direction: column;
   background-color: #ebebeb;
+}
+
+.modal > .content > .header {
+  display: flex;
+  color: #a33232;
+  margin: 1.8em 0 1em;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.modal > .content > .header > button {
+  width: 1em;
+  height: 1em;
+  border: none;
+  outline: none;
+  color: #444;
+  font-size: 2em;
+  cursor: pointer;
+  margin-left: 1em;
+  transition: color 0.1s;
+  background-color: transparent;
+}
+
+.modal > .content > .header > button:hover {
+  opacity: 0.5;
+}
+
+.modal > .content > q {
+  padding-left: 1em;
+  border-left: 3px solid #333;
+}
+
+.modal > .content > ul {
+  width: 90%;
+  margin-left: 5%;
+}
+
+.modal > .content > ul > li {
+  margin: 1em 0;
+  list-style: decimal;
+  list-style-position: inside;
+}
+
+.modal > .content > ul > li.text-light {
+  opacity: 0.8;
+  color: #999;
+}
+
+.modal > .content > .footer {
+  color: #777;
+  margin-top: 1.8em;
+}
+
+.modal > .content > .footer > p {
+  margin: 0.2em;
+  padding: 0 2em;
+  font-size: 0.65em;
+  text-align: center;
 }
